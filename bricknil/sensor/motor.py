@@ -252,7 +252,7 @@ class InternalMotor(TachoMotor):
     def __init__(self, name, port=None, capabilities=[]):
         """Maps the port names `A`, `B`, `AB` to hard-coded port numbers"""
         if port:
-            port_map = [55, 56, 57]
+            port_map = [0x00, 0x01, 0x10]
             port = port_map[port.value]
         self.speed = 0
         super().__init__(name, port, capabilities)
